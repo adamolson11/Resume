@@ -1,0 +1,33 @@
+body {
+  background-color: #acb7ae;
+}
+h1{
+  color: gray;
+  font-size: 24px;
+  font-family: Arial,Helvetica, sans-serif;
+}
+
+img {width 50%;
+}
+h4 {color:gray
+}
+p, li { color: #00458B}
+
+.header {
+  background-color: #e3e0cf;
+    border: 1px solid black;
+  padding-left: 20px;
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
+.footer{
+  background: #3FD2C7; 
+  color: white;
+  border 1px solid black;
+  padding-left: 10px
+}
+
+div {
+  border: 1px solid black;
+}
