@@ -31,3 +31,13 @@ p, li { color: #00458B}
 div {
   border: 1px solid black;
 }
+
+.logo {
+  width: 100px; /* Adjust the width to the size of your logo */
+  height: 100px; /* Adjust the height to the size of your logo */
+  background-image: url('https://github.com/adamolson11/Logo/blob/main/Adam%20Olson%20Logo.png?raw=true'); /* Replace 'path/to/your/logo.png' with the file path of your logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
