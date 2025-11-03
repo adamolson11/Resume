@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ticketflow",
+    "title": "TicketFlow — Support Workflow Visualizer",
+    "short": "Interactive flow viz to find support process bottlenecks.",
+    "long": "TicketFlow ingests ticket metadata (status, assignee, timestamps) and renders an interactive Sankey-like flow so support teams can quickly identify choke points and assignment hotspots. Built with React, D3, and a small Node ETL to normalize ticket events.",
+    "tech": ["React", "D3", "Node", "JSON", "Vercel"],
+    "image": "https://via.placeholder.com/1200x720.png?text=TicketFlow",
+    "live": "",
+    "repo": "https://github.com/adamolson11/ticketflow"
+  },
+  {
+    "id": "hudson-market",
+    "title": "Hudson Blue Market",
+    "short": "Side-project marketplace and utilities hub.",
+    "long": "Hudson Blue Market is a minimal storefront and utilities hub for small automations and micro-SaaS experiments. Built to test product-market fit and small payment flows.",
+    "tech": ["React", "Next.js", "Stripe", "Vercel"],
+    "image": "https://via.placeholder.com/1200x720.png?text=Hudson+Blue+Market",
+    "live": "",
+    "repo": ""
+  },
+  {
+    "id": "portfolio",
+    "title": "Personal Portfolio (This Site)",
+    "short": "A polished portfolio showcasing projects and product-focused engineering.",
+    "long": "This portfolio demonstrates a dark-first design language, data-driven project cards, and a focus on supportability and automation. Built with Next.js and Tailwind CSS for rapid deploy on Vercel.",
+    "tech": ["Next.js", "Tailwind CSS", "Framer Motion"],
+    "image": "https://via.placeholder.com/1200x720.png?text=Portfolio",
+    "live": "",
+    "repo": ""
+  }
+]
