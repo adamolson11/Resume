@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { modal, backdrop } from '../scripts/motion/variants';
 
 export default function ProjectModal({ project, onClose }) {
   const closeRef = useRef(null);
@@ -51,13 +52,20 @@ export default function ProjectModal({ project, onClose }) {
       aria-modal="true"
       className="fixed inset-0 z-50 flex items-center justify-center p-6"
     >
-      <div className="absolute inset-0 bg-black/60" onClick={onClose} />
+      <motion.div 
+        className="absolute inset-0 bg-black/60" 
+        onClick={onClose}
+        variants={backdrop}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      />
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.96, y: 10 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.96 }}
-        transition={{ duration: 0.28 }}
+        variants={modal}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
         className="relative z-10 max-w-3xl w-full bg-gradient-to-b from-white/3 to-black/40 border border-white/6 rounded-xl p-6 shadow-2xl"
       >
         <button
