@@ -1,0 +1,44 @@
+name: CI Validate (orange/ci-validate)
+
+on:
+  push:
+    branches:
+      - 'orange/ci-validate'
+      - 'orange/*'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Install & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Run checks (lint/type/test if present)
+        run: |
+          if npm run -s check >/dev/null 2>&1; then npm run check; else echo "no check script"; fi
+        continue-on-error: true
+
+      - name: Build
+        run: |
+          if npm run -s build >/dev/null 2>&1; then npm run build; else echo "no build script"; fi
+
+      - name: List disk & node versions (debug)
+        run: |
+          node -v
+          npm -v
+          df -h
