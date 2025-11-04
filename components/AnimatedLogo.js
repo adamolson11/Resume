@@ -14,8 +14,8 @@ export default function AnimatedLogo() {
         repeatType: 'mirror',
         ease: 'easeInOut'
       }}
-      className="w-28 h-28 md:w-36 md:h-36 flex items-center justify-center rounded-xl
-                 bg-gradient-to-br from-hb-blue to-cyan-400 text-black text-2xl md:text-4xl font-extrabold shadow-xl"
+      className="w-28 h-28 md:w-36 md:h-36 mx-auto flex items-center justify-center rounded-xl
+                 bg-gradient-to-br from-hb-blue to-cyan-400 text-noir-950 text-2xl md:text-4xl font-extrabold shadow-xl"
       aria-hidden="true"
     >
       AO
