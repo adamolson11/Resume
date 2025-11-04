@@ -130,3 +130,26 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(0, 188, 212, 0.3);
   color: var(--hb-blue);
 }
+
+/* ========== Animated Logo ========== */
+.animated-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, var(--hb-blue), #22d3ee);
+  color: #000;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+}
+
+.animated-logo:focus-visible {
+  outline: 2px solid var(--hb-blue);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-logo {
+    animation: none;
+  }
+}

@@ -1,8 +1,13 @@
+import AnimatedLogo from './AnimatedLogo';
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="mb-8">
+          <div className="flex justify-center mb-6">
+            <AnimatedLogo size={88} />
+          </div>
           <img 
             src="https://media.licdn.com/dms/image/D5635AQHlZ1R9-eiu9g/profile-framedphoto-shrink_400_400/0/1667312177891?e=1680991200&v=beta&t=7XgJ-u6PdFwgMP2fShYuAm2-DXfYwGvIvlF8GEhx2F4"
             alt="Adam Olson"
