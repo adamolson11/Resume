@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 import projects from '../data/projects.json';
 import { motion } from 'framer-motion';
+import { listStagger, card, cardHover } from '../scripts/motion/variants';
 
 export default function Projects() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -21,24 +22,14 @@ export default function Projects() {
           className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
           initial="hidden"
           animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1
-              }
-            }
-          }}
+          variants={listStagger}
         >
           {projects.map((p, i) => (
             <motion.div
               key={p.id}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 }
-              }}
-              whileHover={{ y: -6 }}
+              variants={card}
+              initial="rest"
+              whileHover="hover"
               whileTap={{ scale: 0.98 }}
             >
               <ProjectCard project={p} onOpen={() => setOpenIndex(i)} />

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
+import { logoIdle } from '../scripts/motion/variants';
 
-export default function AnimatedLogo() {
+export default function AnimatedLogo({ size = 88 }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.88 }}
